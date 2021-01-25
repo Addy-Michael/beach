@@ -1,0 +1,286 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --gradient-color-1: #4158d0;
+  --gradient-color-2: #c850c0;
+  --gradient-color-3: #ffcc70;
+
+  --color-primary: #fff;
+  --color-secondary: #1c1f1d;
+  --color-secondary-light: #454746;
+
+  --shadow: 1px 1px 2.5rem 0.5rem var(--color-secondary);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-image: linear-gradient(
+    45deg,
+    var(--gradient-color-1),
+    var(--gradient-color-2),
+    var(--gradient-color-3)
+  );
+  background-repeat: no-repeat;
+  background-size: 100%;
+  min-height: 100vh;
+  line-height: 1.5;
+  color: var(--color-secondary-light);
+}
+
+/* UTILITIES */
+.logo {
+  font-size: 3rem;
+}
+
+.container {
+  background: #efefef;
+  width: 110rem;
+  margin: 8rem auto;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+li {
+  list-style: none;
+}
+
+.active {
+  background: var(--gradient-color-2);
+}
+
+.icon {
+  width: 3rem;
+  height: 3rem;
+}
+
+.l-heading {
+  font-size: 2.5rem;
+}
+
+.mb {
+  margin-bottom: 0.5rem;
+}
+
+.m-xy {
+  margin: 1rem;
+}
+
+.p-xy {
+  padding: 1rem;
+}
+
+/* HEADER */
+.header {
+  background: #fff;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.header h1 {
+  background: linear-gradient(
+    45deg,
+    var(--gradient-color-1),
+    var(--gradient-color-2),
+    var(--gradient-color-3)
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* MAIN BODY */
+.contents {
+  display: flex;
+  background: #efefef;
+  font-size: 1.5rem;
+}
+
+.contents .sidebar {
+  background: var(--color-secondary);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 0 0 20rem;
+}
+
+.contents .sidebar a {
+  color: var(--color-primary);
+  display: block;
+  padding: 1rem;
+}
+
+.contents .sidebar .footer {
+  text-align: center;
+  text-transform: capitalize;
+  padding: 1rem;
+  color: var(--color-primary);
+}
+
+/* BEACH */
+.contents .beach {
+  /* for testing purposes */
+  min-height: 80rem;
+}
+
+.contents .beach .images {
+  display: flex;
+  height: 20rem;
+}
+
+.contents .beach .images img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* CONTACT */
+.contents .beach .contact {
+  background: var(--color-primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--color-secondary-light);
+}
+
+.contents .beach .contact h2 {
+  font-weight: 300;
+  text-transform: capitalize;
+  padding: 1.5rem;
+}
+
+.contents .beach .contact .contact-info .icon,
+.contents .beach .contact .location .icon {
+  fill: var(--color-secondary-light);
+}
+
+.contents .beach .contact .location {
+  display: flex;
+  align-items: center;
+}
+
+.contents .beach .contact .overall-ratings {
+  align-self: stretch;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gradient-color-2);
+  color: var(--color-primary);
+  padding: 0 2rem;
+}
+
+/* INFORMATION */
+.contents .beach .information {
+  margin: 5rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.contents .beach .information .main-info {
+  background: var(--color-primary);
+  min-height: 40rem;
+  flex: 0 0 50rem;
+  margin-right: 5rem;
+  box-shadow: var(--shadow);
+}
+
+/* RECOMMENDATION */
+.contents .beach .recommendation {
+  display: flex;
+  align-items: center;
+}
+
+.contents .beach .recommendation blockquote {
+  color: #707070;
+  font-size: 1rem;
+  margin-right: auto;
+}
+
+.contents .beach .recommendation img {
+  width: 4rem;
+  height: 4rem;
+  border: 2px solid #707070;
+  border-radius: 50%;
+}
+
+/* REVIEWS */
+.contents .beach .information .reviews {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.contents .beach .information .reviews .review {
+  background: var(--color-primary);
+  box-shadow: var(--shadow);
+}
+
+.contents .beach .information .reviews .review .user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contents .beach .information .reviews .review .user .user-info {
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+
+.contents .beach .information .reviews .review .user .user-info span {
+  display: block;
+  font-size: 1rem;
+}
+
+.contents .beach .information .reviews .review .user .user-info img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.contents .beach .information .reviews .review:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+/* IMAGES FOOTER */
+.images.footer {
+  position: relative;
+}
+
+.images.footer::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--color-secondary-light);
+  opacity: 0.85;
+}
+
+/* CTA */
+.contents .beach .cta {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.contents .beach .cta a {
+  padding: 1.5rem;
+  background: var(--gradient-color-2);
+  color: var(--color-primary);
+}
