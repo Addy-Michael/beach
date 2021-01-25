@@ -44,7 +44,7 @@ body {
 
 .container {
   background: #efefef;
-  width: 110rem;
+  max-width: 110rem;
   margin: 8rem auto;
   min-height: 100vh;
 }
@@ -116,10 +116,36 @@ li {
   flex: 0 0 20rem;
 }
 
-.contents .sidebar a {
+.contents .sidebar li a {
   color: var(--color-primary);
   display: block;
   padding: 1rem;
+  z-index: 2;
+  position: relative;
+  letter-spacing: 0.2rem;
+}
+
+.contents .sidebar li {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.contents .sidebar li::before {
+  content: "";
+  background: var(--gradient-color-2);
+  width: 3px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: scaleY(0);
+  transition: transform 0.3s ease-in, width 0.2s 0.2s;
+  z-index: 1;
+}
+
+.contents .sidebar li:hover::before {
+  transform: scaleY(1);
+  width: 100%;
 }
 
 .contents .sidebar .footer {
@@ -161,9 +187,33 @@ li {
   padding: 1.5rem;
 }
 
-.contents .beach .contact .contact-info .icon,
-.contents .beach .contact .location .icon {
+.contents .beach .contact .contact-info .icon {
   fill: var(--color-secondary-light);
+}
+
+.contents .beach .contact .location .icon {
+  fill: var(--gradient-color-2);
+}
+
+.contents .beach .contact .contact-info .icon {
+  cursor: pointer;
+  transition: fill 0.2s;
+}
+
+.contents .beach .contact .location span {
+  cursor: pointer;
+  border-bottom: 1px solid var(--color-secondary-light);
+  transition: all 0.2s;
+  display: inline-block;
+}
+
+.contents .beach .contact .location span:hover {
+  border-bottom: 1px solid var(--gradient-color-2);
+  box-shadow: var(--shadow);
+}
+
+.contents .beach .contact .contact-info .icon:hover {
+  fill: var(--gradient-color-2);
 }
 
 .contents .beach .contact .location {
@@ -283,4 +333,10 @@ li {
   padding: 1.5rem;
   background: var(--gradient-color-2);
   color: var(--color-primary);
+  transition: background 0.2s;
+}
+
+.contents .beach .cta a:hover {
+  background: var(--gradient-color-3);
+  box-shadow: var(--shadow);
 }
