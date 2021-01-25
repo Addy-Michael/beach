@@ -33,7 +33,7 @@ body {
   background-repeat: no-repeat;
   background-size: 100%;
   min-height: 100vh;
-  line-height: 1.5;
+  line-height: 1.7;
   color: var(--color-secondary-light);
 }
 
@@ -68,6 +68,11 @@ li {
 }
 
 .l-heading {
+  font-size: 8rem;
+  font-weight: 500;
+}
+
+.m-heading {
   font-size: 2.5rem;
 }
 
@@ -81,6 +86,10 @@ li {
 
 .p-xy {
   padding: 1rem;
+}
+
+.m-info {
+  margin: 5rem 1.5rem;
 }
 
 /* HEADER */
@@ -130,6 +139,10 @@ li {
   margin-bottom: 1rem;
 }
 
+.contents .sidebar li:first-child {
+  margin-top: 1rem;
+}
+
 .contents .sidebar li::before {
   content: "";
   background: var(--gradient-color-2);
@@ -172,8 +185,8 @@ li {
   display: block;
 }
 
-/* CONTACT */
-.contents .beach .contact {
+/* CONTACT COMPOENT*/
+.contents .contact {
   background: var(--color-primary);
   display: flex;
   justify-content: space-between;
@@ -181,47 +194,47 @@ li {
   color: var(--color-secondary-light);
 }
 
-.contents .beach .contact h2 {
+.contents .contact h2 {
   font-weight: 300;
   text-transform: capitalize;
   padding: 1.5rem;
 }
 
-.contents .beach .contact .contact-info .icon {
+.contents .contact .contact-info .icon {
   fill: var(--color-secondary-light);
 }
 
-.contents .beach .contact .location .icon {
+.contents .contact .location .icon {
   fill: var(--gradient-color-2);
 }
 
-.contents .beach .contact .contact-info .icon {
+.contents .contact .contact-info .icon {
   cursor: pointer;
   transition: fill 0.2s;
 }
 
-.contents .beach .contact .location span {
+.contents .contact .location span {
   cursor: pointer;
   border-bottom: 1px solid var(--color-secondary-light);
   transition: all 0.2s;
   display: inline-block;
 }
 
-.contents .beach .contact .location span:hover {
+.contents .contact .location span:hover {
   border-bottom: 1px solid var(--gradient-color-2);
   box-shadow: var(--shadow);
 }
 
-.contents .beach .contact .contact-info .icon:hover {
+.contents .contact .contact-info .icon:hover {
   fill: var(--gradient-color-2);
 }
 
-.contents .beach .contact .location {
+.contents .contact .location {
   display: flex;
   align-items: center;
 }
 
-.contents .beach .contact .overall-ratings {
+.contents .contact .overall-ratings {
   align-self: stretch;
   flex-direction: column;
   display: flex;
@@ -234,7 +247,6 @@ li {
 
 /* INFORMATION */
 .contents .beach .information {
-  margin: 5rem 1.5rem;
   display: flex;
   justify-content: space-between;
   text-align: center;
@@ -339,4 +351,78 @@ li {
 .contents .beach .cta a:hover {
   background: var(--gradient-color-3);
   box-shadow: var(--shadow);
+}
+
+/* ABOUT PAGE */
+.contents .about {
+  min-height: 80rem;
+}
+
+.contents .about .video-file {
+  width: 100%;
+  height: 50vh;
+  position: relative;
+}
+
+.contents .about .video-file::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--gradient-color-2);
+  opacity: 0.6;
+}
+
+.contents .about .video-file video {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.contents .about .video-file .about-info {
+  text-align: center;
+  padding: 1.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.contents .about .video-file .about-info p,
+.contents .about .video-file .about-info h1 {
+  color: var(--color-primary);
+}
+
+.contents .about .video-file .about-info p {
+  font-size: 1.5rem;
+}
+
+.contents .about .information .main-info {
+  text-align: center;
+  background: var(--color-primary);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.contents .about .information .main-info h2 {
+  color: var(--gradient-color-2);
+}
+
+.contents .about .information .services {
+  text-align: center;
+}
+
+.contents .about .information .services h2 {
+  color: var(--gradient-color-2);
+  cursor: pointer;
+  transition: transform 0.2s;
+  display: inline-block;
+}
+
+.contents .about .information .services h2:hover {
+  transform: skewY(-10deg);
+  text-shadow: 0.5rem 0.5rem 1rem var(--color-secondary);
 }
