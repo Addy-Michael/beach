@@ -413,16 +413,35 @@ li {
 
 .contents .about .information .services {
   text-align: center;
+  margin-top: 2rem;
 }
 
-.contents .about .information .services h2 {
+.contents .about .information .services .animate {
   color: var(--gradient-color-2);
   cursor: pointer;
   transition: transform 0.2s;
   display: inline-block;
 }
 
-.contents .about .information .services h2:hover {
+.contents .about .information .services .animate:hover {
   transform: skewY(-10deg);
   text-shadow: 0.5rem 0.5rem 1rem var(--color-secondary);
+}
+
+.contents .about .information .services .detail {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.contents .about .information .services .detail .service {
+  background: var(--color-primary);
+  margin: 1.5rem 1rem;
+  padding: 1rem;
+  box-shadow: var(--shadow);
+}
+
+.contents .about .information .services .detail .service i {
+  font-size: 3.5rem;
+  color: var(--gradient-color-2);
 }
